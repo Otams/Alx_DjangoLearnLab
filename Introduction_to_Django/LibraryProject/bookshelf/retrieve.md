@@ -1,10 +1,9 @@
-
 # 🔵 Retrieve Operation
 
 from bookshelf.models import Book
 
-# Retrieve all books
-books = Book.objects.all()
+# Retrieve the book with title "1984"
+book = Book.objects.get(title="1984")
 
-for b in books:
-    print(b.id, b.title, b.author, b.publication_year)
+# Display all attributes
+print(book.id, book.title, book.author, book.publication_year)
